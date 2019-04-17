@@ -1,0 +1,23 @@
+<h1>Inventory: <%= @prod_cat %></h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Category</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @products.each do |product| %>
+			<tr>
+			<td><%= product.id %></td>
+			<td><%= product.name %></td>
+			<td><%= number_to_currency(product.price) %></td>
+			<td><%= product.category %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
